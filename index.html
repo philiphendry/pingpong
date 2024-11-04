@@ -10,10 +10,30 @@
             display: block;
             margin: 0 auto;
         }
+        .instructions {
+            text-align: center;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .player-controls {
+            display: inline-block;
+            margin: 0 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div class="instructions">
+        <div class="player-controls">
+            Player 1: Press <strong>Q</strong> to move up, <strong>A</strong> to move down
+        </div>
+        <div class="player-controls">
+            Player 2: Press <strong>P</strong> to move up, <strong>L</strong> to move down
+        </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
 </body>
 </html> 
