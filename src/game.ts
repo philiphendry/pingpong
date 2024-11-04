@@ -47,7 +47,7 @@ export class PingPong {
         rotation: number;
         rotationSpeed: number;
     }> = [];
-    private readonly WINNING_SCORE = 1;
+    private readonly WINNING_SCORE = 5;
     private readonly TROPHY_SIZE = 120;
     private readonly CONFETTI_COUNT = 50;
 
