@@ -50,6 +50,7 @@ export class PingPong {
     private readonly WINNING_SCORE = 5;
     private readonly TROPHY_SIZE = 120;
     private readonly CONFETTI_COUNT = 50;
+    private readonly BALL_SPEED = 2;
 
     constructor() {
         this.canvas = document.getElementById('gameCanvas') as HTMLCanvasElement;
@@ -96,8 +97,8 @@ export class PingPong {
             x: this.canvas.width / 2,
             y: this.canvas.height / 2,
             radius: 8,
-            speedX: 5,
-            speedY: 5,
+            speedX: this.BALL_SPEED,
+            speedY: this.BALL_SPEED,
             previousPositions: []
         };
 
@@ -248,7 +249,7 @@ export class PingPong {
         this.ball.x = this.canvas.width / 2;
         this.ball.y = this.canvas.height / 2;
         this.ball.speedX = -this.ball.speedX;
-        this.ball.speedY = Math.random() * 10 - 5;
+        this.ball.speedY = (Math.random() * 2 - 1) * this.BALL_SPEED; // Random angle but maintain speed
 
         // Reset ball trail positions
         const now = Date.now();
